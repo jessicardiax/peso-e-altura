@@ -8,26 +8,28 @@ altura):
 
 int main()
 {
-char sexo, F,M;
-float altura, peso,resultado ;
+char sexo;
+float altura, peso,resultado;
 // M para masculino e F para feminino
 
    printf("informe seu sexo[F] ou [M]: ");
    scanf("%c", &sexo);
    
-   printf("informe sua altura:");
+   printf("informe sua altura (exemplo: 1.80m):");
    scanf("%f",&altura);
    
    printf("informe seu peso : ");
    scanf("%f", &peso);
     
-    if (sexo=='M'){
+    if (sexo=='M')
+    {
         resultado = (72.1*altura - 50);
-        printf ("seu peso ideal é 56,5");
+        printf ("seu peso ideal é %.2fkg", resultado);
     }
-    else if (sexo== 'F'){
+    else if (sexo=='F')
+    {
         resultado =(62.1*altura - 44.7);
-        printf("seu peso ideal é 52,7");
+        printf("seu peso ideal é  %.2fkg", resultado);
     }
     return 0;
 }
